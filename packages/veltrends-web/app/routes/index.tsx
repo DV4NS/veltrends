@@ -67,8 +67,8 @@ export const meta: MetaFunction = ({ params, location }) => {
 
     if (query.mode === 'recent') {
       return {
-        title: 'Veltrends - 최신 뉴스',
-        description: '방금 벨트렌즈에 올라온 따끈따끈한 뉴스들을 확인해보세요.',
+        title: 'Latest news',
+        description: 'Check out the hot news that just came up on Belt Lens.',
       }
     }
     if (query.mode === 'past') {
@@ -77,19 +77,19 @@ export const meta: MetaFunction = ({ params, location }) => {
       const startDate = (start as string) ?? range?.[0]
       const endDate = (end as string) ?? range?.[1]
 
-      const formattedStart = format(new Date(startDate), 'yyyy년 MM월 dd일')
-      const formattedEnd = format(new Date(endDate), 'yyyy년 MM월 dd일')
+      const formattedStart = format(new Date(startDate), 'yyyy MM dd')
+      const formattedEnd = format(new Date(endDate), 'yyyy MM dd')
 
       return {
-        title: `Veltrends - 과거 뉴스 (${formattedStart} ~ ${formattedEnd})`,
-        description: `${formattedStart} ~ ${formattedEnd}에 벨트렌즈에 올라온 뉴스들을 인기순으로 확인해보세요.`,
+        title: `Past news(${formattedStart} ~ ${formattedEnd})`,
+        description: `${formattedStart} ~ ${formattedEnd}Check out the news posted on Beltlens in order of popularity.`,
       }
     }
 
     return {
       title: 'Veltrends',
       description:
-        '개발, IT, 디자인, 스타트업 관련 유익하고 재미있는 소식들을 벨트렌즈에서 확인하세요.',
+        'Check Belt Lens for useful and interesting news related to development, IT, design, and startups.',
     }
   })()
 

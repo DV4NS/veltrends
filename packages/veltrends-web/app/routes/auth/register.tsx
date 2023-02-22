@@ -11,7 +11,7 @@ import { extractError, type AppError } from '~/lib/error'
 /** @todo: redirect to home when already logged in */
 
 export const meta: MetaFunction = () => {
-  return { title: '회원가입', robots: 'noindex' }
+  return { title: 'Join the membership', robots: 'noindex' }
 }
 
 export const action: ActionFunction = async ({ request }) => {
@@ -52,7 +52,7 @@ export default function Register({ error }: Props) {
   }, [actionData, setUser])
 
   return (
-    <BasicLayout title="회원가입" hasBackButton desktopHeaderVisible={false}>
+    <BasicLayout title="Join the membership" hasBackButton desktopHeaderVisible={false}>
       <AuthForm mode="register" error={error} />
     </BasicLayout>
   )

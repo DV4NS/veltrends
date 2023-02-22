@@ -38,15 +38,15 @@ export const meta: MetaFunction = ({ params, data, location }) => {
   const { q } = QueryString.parse(location.search, { ignoreQueryPrefix: true })
   if (!q) {
     return {
-      title: '검색',
+      title: 'Search',
       robots: 'noindex',
     }
   }
   const { totalCount } = data as SearchItemsResult
 
   return {
-    title: `"${q}" 검색 결과 - veltrends`,
-    description: `"${q}" 검색 결과입니다. 총 ${totalCount}개의 검색 결과가 있습니다.`,
+    title: `"${q}" Search Results`,
+    description: `"${q}" This is the search result. 총 ${totalCount}There are 2 search results.`,
   }
 }
 

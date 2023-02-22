@@ -57,16 +57,16 @@ function Edit() {
   const errorMessage = null
 
   return (
-    <BasicLayout title="수정" hasBackButton>
-      <WriteFormTemplate buttonText="수정하기" onSubmit={onSubmit}>
+    <BasicLayout title="Correction" hasBackButton>
+      <WriteFormTemplate buttonText="Edit" onSubmit={onSubmit}>
         <Group>
           <LabelInput
-            label="제목"
+            label="title"
             name="title"
             onChange={onChange}
             value={form.title}
           />
-          <LabelEditorGroup label="내용">
+          <LabelEditorGroup label="Detail">
             {({ onFocus, onBlur }) => (
               <StyledEditor
                 onFocus={onFocus}

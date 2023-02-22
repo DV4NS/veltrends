@@ -27,7 +27,7 @@ export const loader: LoaderFunction = async ({ request, context }) => {
 }
 
 export const meta: MetaFunction = () => {
-  return { title: '북마크', robots: 'noindex' }
+  return { title: 'Bookmark', robots: 'noindex' }
 }
 
 export default function Bookmarks() {
@@ -60,7 +60,7 @@ export default function Bookmarks() {
       {items?.length === 0 ? (
         <EmptyList
           message={
-            '북마크가 없습니다.\n나중에 다시 보고 싶은 링크를 북마크에 추가해보세요.'
+            'There is no bookmark.\nTry adding a link to your bookmarks that you want to see again later.'
           }
         />
       ) : null}

@@ -14,7 +14,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 }
 
 export const meta: MetaFunction = () => {
-  return { title: '새 글 작성', robots: 'noindex' }
+  return { title: 'Write a new post', robots: 'noindex' }
 }
 
 function Write() {

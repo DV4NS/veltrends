@@ -13,7 +13,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 }
 
 export const meta: MetaFunction = () => {
-  return { title: '설정', robots: 'noindex' }
+  return { title: 'Settings', robots: 'noindex' }
 }
 
 export default function Setting() {

@@ -11,7 +11,7 @@ import { extractError, type AppError } from '~/lib/error'
 /** @todo: redirect to home when already logged in */
 
 export const meta: MetaFunction = () => {
-  return { title: '로그인', robots: 'noindex' }
+  return { title: 'Log in', robots: 'noindex' }
 }
 
 export const action: ActionFunction = async ({ request, context }) => {

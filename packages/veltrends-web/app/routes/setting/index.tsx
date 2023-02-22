@@ -12,8 +12,8 @@ function SettingIndex() {
     <TabLayout>
       <Block>
         <ListWrapper>
-          <ListItemLink to="/setting/account">내 계정</ListItemLink>
-          <ListItem onClick={logout}>로그아웃</ListItem>
+          <ListItemLink to="/setting/account">My account</ListItemLink>
+          <ListItem onClick={logout}>Log out</ListItem>
         </ListWrapper>
       </Block>
     </TabLayout>

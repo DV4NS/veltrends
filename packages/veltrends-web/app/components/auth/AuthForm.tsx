@@ -23,19 +23,19 @@ interface Props {
 
 const authDescriptions = {
   login: {
-    usernamePlaceholder: '아이디를 입력하세요.',
-    passwordPlaceholder: '비밀번호를 입력하세요.',
-    buttonText: '로그인',
-    actionText: '회원가입',
-    question: '계정이 없으신가요?',
+    usernamePlaceholder: 'Please enter your ID.',
+    passwordPlaceholder: 'Please enter a password.',
+    buttonText: 'Log in',
+    actionText: 'Join the membership',
+    question: 'Dont have an account?',
     actionLink: '/auth/register',
   },
   register: {
-    usernamePlaceholder: '5~20자 사이의 영문 소문자 숫자 입력',
-    passwordPlaceholder: '8자 이상, 영문/숫자/특수문자 중 2가지 이상 입력',
-    buttonText: '회원가입',
-    actionText: '로그인',
-    question: '계정이 이미 있으신가요?',
+    usernamePlaceholder: '5~20Enter lowercase letters and numbers between characters',
+    passwordPlaceholder: '8characters, at least two of English/number/special characters',
+    buttonText: 'Join the membership',
+    actionText: 'Log in',
+    question: 'Already have an account?',
     actionLink: '/auth/login',
   },
 } as const
@@ -51,12 +51,12 @@ function AuthForm({ mode, error }: Props) {
     form: {
       username: {
         validate: mode === 'register' ? validate.username : undefined,
-        errorMessage: '5~20자 사이의 영문 소문자 또는 숫자를 입력해주세요.',
+        errorMessage: '5~20Please enter lowercase English letters or numbers between characters.',
       },
       password: {
         validate: mode === 'register' ? validate.password : undefined,
         errorMessage:
-          '8자 이상, 영문/숫자/특수문자 중 2가지 이상 입력해주세요.',
+          '8Please enter at least 2 letters/numbers/special characters.',
       },
     },
     mode: 'all',
@@ -76,7 +76,7 @@ function AuthForm({ mode, error }: Props) {
 
   useEffect(() => {
     if (error?.name === 'AlreadyExists') {
-      setError('username', '이미 존재하는 계정입니다.')
+      setError('username', 'This account already exists.')
     }
   }, [error, setError])
 
@@ -105,7 +105,7 @@ function AuthForm({ mode, error }: Props) {
       </InputGroup>
       <ActionsBox>
         {error?.name === 'WrongCredentials' ? (
-          <ActionErrorMessage>잘못된 계정 정보입니다.</ActionErrorMessage>
+          <ActionErrorMessage>Invalid account information.</ActionErrorMessage>
         ) : null}
         <Button type="submit" layoutMode="fullWidth" disabled={isLoading}>
           {buttonText}

@@ -4,7 +4,7 @@ import AccountSetting from '~/components/setting/AccountSetting'
 
 function Account() {
   return (
-    <BasicLayout title="내 계정" hasBackButton>
+    <BasicLayout title="My account" hasBackButton>
       <AccountSetting />
     </BasicLayout>
   )
